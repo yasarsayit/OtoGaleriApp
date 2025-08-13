@@ -1,0 +1,2 @@
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Model\obj\Debug\AutoShowroomApp.Model.csproj.AssemblyReference.cache
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Model\obj\Debug\AutoShowroomApp.Model.csproj.CoreCompileInputs.cache

@@ -1,0 +1,16 @@
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\bin\Debug\OtoGaleriApp.DataAccess.dll.config
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\bin\Debug\OtoGaleriApp.DataAccess.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\bin\Debug\OtoGaleriApp.DataAccess.pdb
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\bin\Debug\OtoGaleriApp.Model.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\bin\Debug\OtoGaleriApp.Model.pdb
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaleriApp.DataAccess.csproj.AssemblyReference.cache
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaleriApp.DataAccess.Migrations.InitialCreate.resources
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaleriApp.DataAccess.csproj.GenerateResource.cache
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaleriApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaler.874F6FDB.Up2Date
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaleriApp.DataAccess.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaleriApp.DataAccess.pdb

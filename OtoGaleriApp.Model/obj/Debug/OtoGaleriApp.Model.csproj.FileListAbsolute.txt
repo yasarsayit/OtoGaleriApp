@@ -1,0 +1,6 @@
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Model\bin\Debug\OtoGaleriApp.Model.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Model\bin\Debug\OtoGaleriApp.Model.pdb
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Model\obj\Debug\OtoGaleriApp.Model.csproj.AssemblyReference.cache
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Model\obj\Debug\OtoGaleriApp.Model.csproj.CoreCompileInputs.cache
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Model\obj\Debug\OtoGaleriApp.Model.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Model\obj\Debug\OtoGaleriApp.Model.pdb

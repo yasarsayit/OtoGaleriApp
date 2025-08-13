@@ -1,0 +1,17 @@
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\OtoGaleriApp.Presenter.dll.config
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\OtoGaleriApp.Presenter.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\OtoGaleriApp.Presenter.pdb
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\EntityFramework.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\OtoGaleriApp.DataAccess.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\OtoGaleriApp.Model.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\OtoGaleriApp.DataAccess.pdb
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\OtoGaleriApp.DataAccess.dll.config
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\OtoGaleriApp.Model.pdb
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\EntityFramework.xml
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\obj\Debug\OtoGaleriApp.Presenter.csproj.AssemblyReference.cache
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\obj\Debug\OtoGaleriApp.Presenter.csproj.CoreCompileInputs.cache
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\obj\Debug\OtoGaler.62BB29D6.Up2Date
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\obj\Debug\OtoGaleriApp.Presenter.dll
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.Presenter\obj\Debug\OtoGaleriApp.Presenter.pdb

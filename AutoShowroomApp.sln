@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtoGaleriApp.Model", "OtoGaleriApp.Model\OtoGaleriApp.Model.csproj", "{2FA57BDB-687E-49E8-8F9B-4D9736AB3C61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtoGaleriApp.View", "OtoGaleriApp.View\OtoGaleriApp.View.csproj", "{E61D81FE-9BF6-4123-8815-3117A01CC0ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtoGaleriApp.Presenter", "OtoGaleriApp.Presenter\OtoGaleriApp.Presenter.csproj", "{D9C14932-FCD9-4D3A-897A-24F62E8BAD6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtoGaleriApp.DataAccess", "OtoGaleriApp.DataAccess\OtoGaleriApp.DataAccess.csproj", "{19567244-3556-4130-9166-C6D9EA6C3EE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FA57BDB-687E-49E8-8F9B-4D9736AB3C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA57BDB-687E-49E8-8F9B-4D9736AB3C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA57BDB-687E-49E8-8F9B-4D9736AB3C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA57BDB-687E-49E8-8F9B-4D9736AB3C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E61D81FE-9BF6-4123-8815-3117A01CC0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E61D81FE-9BF6-4123-8815-3117A01CC0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E61D81FE-9BF6-4123-8815-3117A01CC0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E61D81FE-9BF6-4123-8815-3117A01CC0ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C14932-FCD9-4D3A-897A-24F62E8BAD6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C14932-FCD9-4D3A-897A-24F62E8BAD6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C14932-FCD9-4D3A-897A-24F62E8BAD6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C14932-FCD9-4D3A-897A-24F62E8BAD6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19567244-3556-4130-9166-C6D9EA6C3EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19567244-3556-4130-9166-C6D9EA6C3EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19567244-3556-4130-9166-C6D9EA6C3EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19567244-3556-4130-9166-C6D9EA6C3EE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
