@@ -58,7 +58,7 @@
             this.lblKullaniciAdi.Size = new System.Drawing.Size(120, 20);
             this.lblKullaniciAdi.TabIndex = 1;
             this.lblKullaniciAdi.Text = "Kullanıcı Adı:";
-            this.lblKullaniciAdi.Click += new System.EventHandler(this.label2_Click);
+            this.lblKullaniciAdi.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // lblSifreTekrari
             // 
@@ -79,7 +79,7 @@
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(213, 27);
             this.txtKullaniciAdi.TabIndex = 3;
-            this.txtKullaniciAdi.TextChanged += new System.EventHandler(this.txtKullaniciAdi_TextChanged);
+            //this.txtKullaniciAdi.TextChanged += new System.EventHandler(this.txtKullaniciAdi_TextChanged);
             // 
             // txtSifreTekrar
             // 
@@ -104,19 +104,21 @@
             // btnKaydet
             // 
             this.btnKaydet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKaydet.BackColor = System.Drawing.SystemColors.Info;
             this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.Location = new System.Drawing.Point(391, 278);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(115, 49);
             this.btnKaydet.TabIndex = 6;
             this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // KullaniciEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.txtSifre);
@@ -128,7 +130,7 @@
             this.Name = "KullaniciEkleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KullaniciEkleForm";
-            this.Load += new System.EventHandler(this.KullaniciEkleForm_Load);
+            //this.Load += new System.EventHandler(this.KullaniciEkleForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

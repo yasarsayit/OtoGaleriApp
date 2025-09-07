@@ -1,72 +1,48 @@
-﻿using OtoGaleriApp.DataAccess;
+﻿using OtoGaleriApp.Interfaces;
+using OtoGaleriApp.Presenter;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OtoGaleriApp.View
 {
-    public partial class AracSilForm : Form
+    public partial class AracSilForm : Form, IAracSilView
     {
-        private AnaForm _anaForm;
+        private readonly AracSilPresenter _presenter;
 
-        public AracSilForm(AnaForm anaForm)
+        public AracSilForm()
         {
             InitializeComponent();
-            _anaForm = anaForm;
+            _presenter = new AracSilPresenter(this);
+        }
+
+        public int SecilenAracId
+        {
+            get
+            {
+                if (cmbAraclar.SelectedValue != null && int.TryParse(cmbAraclar.SelectedValue.ToString(), out int id))
+                    return id;
+                return 0;
+            }
+        }
+
+        public void ShowMessage(string message) => MessageBox.Show(message);
+        public void CloseForm() => this.Close();
+
+        public void SetAraclar(object araclar)
+        {
+            cmbAraclar.DataSource = araclar;
+            cmbAraclar.DisplayMember = "Display";
+            cmbAraclar.ValueMember = "Id";
         }
 
         private void AracSilForm_Load(object sender, EventArgs e)
         {
-            using (var context = new GaleriContext())
-            {
-                var araclar = context.Araclar
-                    .Select(a => new
-                    {
-                        a.Id,
-                        Display = a.Marka + " " + a.Model + " - " + a.Yil + " - " + a.Plaka
-                    })
-                    .ToList();
-
-                cmbAraclar.DataSource = araclar;
-                cmbAraclar.DisplayMember = "Display";
-                cmbAraclar.ValueMember = "Id";
-            }
+            _presenter.Yukle();
         }
 
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnSil_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSil_Click_1(object sender, EventArgs e)
-        {
-            int secilenId = (int)cmbAraclar.SelectedValue;
-
-            using (var context = new GaleriContext())
-            {
-                var arac = context.Araclar.Find(secilenId);
-
-                if (arac != null)
-                {
-                    context.Araclar.Remove(arac);
-                    context.SaveChanges();
-                    MessageBox.Show("Araç silindi.");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Araç bulunamadı.");
-                }
-            }
+            _presenter.Sil();
         }
     }
-
 }
-

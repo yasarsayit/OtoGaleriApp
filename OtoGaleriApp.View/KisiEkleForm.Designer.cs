@@ -74,27 +74,27 @@
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(296, 27);
             this.txtSoyad.TabIndex = 4;
-            this.txtSoyad.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // btnKisiEkle
             // 
             this.btnKisiEkle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKisiEkle.BackColor = System.Drawing.SystemColors.Info;
             this.btnKisiEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKisiEkle.Location = new System.Drawing.Point(371, 292);
             this.btnKisiEkle.Name = "btnKisiEkle";
             this.btnKisiEkle.Size = new System.Drawing.Size(117, 44);
             this.btnKisiEkle.TabIndex = 5;
             this.btnKisiEkle.Text = "Kişi Ekle";
-            this.btnKisiEkle.UseVisualStyleBackColor = true;
-            this.btnKisiEkle.Click += new System.EventHandler(this.btnKisiEkle_Click_1);
+            this.btnKisiEkle.UseVisualStyleBackColor = false;
+            this.btnKisiEkle.Click += new System.EventHandler(this.btnKisiEkle_Click);
             // 
             // lblAd
             // 
             this.lblAd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAd.Location = new System.Drawing.Point(228, 106);
+            this.lblAd.Location = new System.Drawing.Point(206, 106);
             this.lblAd.Name = "lblAd";
-            this.lblAd.Size = new System.Drawing.Size(38, 33);
+            this.lblAd.Size = new System.Drawing.Size(60, 33);
             this.lblAd.TabIndex = 6;
             this.lblAd.Text = "Ad:";
             this.lblAd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,9 +103,9 @@
             // 
             this.lblSoyad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSoyad.Location = new System.Drawing.Point(195, 151);
+            this.lblSoyad.Location = new System.Drawing.Point(180, 151);
             this.lblSoyad.Name = "lblSoyad";
-            this.lblSoyad.Size = new System.Drawing.Size(71, 33);
+            this.lblSoyad.Size = new System.Drawing.Size(77, 33);
             this.lblSoyad.TabIndex = 7;
             this.lblSoyad.Text = "Soyad:";
             this.lblSoyad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -114,9 +114,9 @@
             // 
             this.lblTC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTC.Location = new System.Drawing.Point(222, 201);
+            this.lblTC.Location = new System.Drawing.Point(200, 201);
             this.lblTC.Name = "lblTC";
-            this.lblTC.Size = new System.Drawing.Size(44, 33);
+            this.lblTC.Size = new System.Drawing.Size(66, 33);
             this.lblTC.TabIndex = 8;
             this.lblTC.Text = "TC:";
             this.lblTC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -125,9 +125,9 @@
             // 
             this.lblTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTelefon.Location = new System.Drawing.Point(179, 245);
+            this.lblTelefon.Location = new System.Drawing.Point(157, 245);
             this.lblTelefon.Name = "lblTelefon";
-            this.lblTelefon.Size = new System.Drawing.Size(87, 33);
+            this.lblTelefon.Size = new System.Drawing.Size(109, 33);
             this.lblTelefon.TabIndex = 9;
             this.lblTelefon.Text = "Telefon:";
             this.lblTelefon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,6 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(812, 470);
             this.Controls.Add(this.lblTelefon);
             this.Controls.Add(this.lblTC);

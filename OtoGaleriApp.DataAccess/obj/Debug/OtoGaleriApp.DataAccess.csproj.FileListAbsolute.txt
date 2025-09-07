@@ -14,3 +14,4 @@ C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debu
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaler.874F6FDB.Up2Date
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaleriApp.DataAccess.dll
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaleriApp.DataAccess.pdb
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.DataAccess\obj\Debug\OtoGaleriApp.DataAccess.Migrations.ChangeTcToString.resources

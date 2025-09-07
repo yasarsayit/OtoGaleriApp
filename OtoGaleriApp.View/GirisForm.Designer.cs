@@ -39,6 +39,7 @@
             // UsernametextBox1
             // 
             this.UsernametextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.UsernametextBox1.BackColor = System.Drawing.SystemColors.Window;
             this.UsernametextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.UsernametextBox1.Location = new System.Drawing.Point(436, 177);
             this.UsernametextBox1.Name = "UsernametextBox1";
@@ -59,11 +60,11 @@
             // lblKullaniciAdi
             // 
             this.lblKullaniciAdi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblKullaniciAdi.BackColor = System.Drawing.SystemColors.Control;
+            this.lblKullaniciAdi.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblKullaniciAdi.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblKullaniciAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblKullaniciAdi.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(224, 168);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(260, 168);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblKullaniciAdi.Size = new System.Drawing.Size(179, 45);
@@ -74,9 +75,9 @@
             // lblSifre
             // 
             this.lblSifre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSifre.BackColor = System.Drawing.SystemColors.Control;
+            this.lblSifre.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSifre.Location = new System.Drawing.Point(304, 213);
+            this.lblSifre.Location = new System.Drawing.Point(331, 213);
             this.lblSifre.Name = "lblSifre";
             this.lblSifre.Size = new System.Drawing.Size(99, 43);
             this.lblSifre.TabIndex = 4;
@@ -87,31 +88,34 @@
             // btnGirisYap
             // 
             this.btnGirisYap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGirisYap.BackColor = System.Drawing.SystemColors.Info;
             this.btnGirisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGirisYap.Location = new System.Drawing.Point(454, 272);
             this.btnGirisYap.Name = "btnGirisYap";
             this.btnGirisYap.Size = new System.Drawing.Size(116, 57);
             this.btnGirisYap.TabIndex = 5;
             this.btnGirisYap.Text = "Giriş Yap";
-            this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.UseVisualStyleBackColor = false;
             this.btnGirisYap.Click += new System.EventHandler(this.Loginbutton1_Click);
             // 
             // BtnKayitOl
             // 
             this.BtnKayitOl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnKayitOl.BackColor = System.Drawing.SystemColors.Info;
             this.BtnKayitOl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnKayitOl.Location = new System.Drawing.Point(587, 272);
             this.BtnKayitOl.Name = "BtnKayitOl";
             this.BtnKayitOl.Size = new System.Drawing.Size(116, 57);
             this.BtnKayitOl.TabIndex = 6;
             this.BtnKayitOl.Text = "Kayıt Ol";
-            this.BtnKayitOl.UseVisualStyleBackColor = true;
+            this.BtnKayitOl.UseVisualStyleBackColor = false;
             this.BtnKayitOl.Click += new System.EventHandler(this.BtnKullaniciEkle_Click_1);
             // 
             // GirisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(982, 553);
             this.Controls.Add(this.BtnKayitOl);

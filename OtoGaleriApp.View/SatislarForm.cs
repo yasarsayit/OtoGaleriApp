@@ -1,44 +1,28 @@
-﻿using OtoGaleriApp.DataAccess;
+﻿using OtoGaleriApp.Interfaces;
+using OtoGaleriApp.Presenter;
 using System;
-using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace OtoGaleriApp.View
 {
-    public partial class SatislarForm : Form
+    public partial class SatislarForm : Form, ISatisListeView
     {
+        private readonly SatisListePresenter _presenter;
+
         public SatislarForm()
         {
             InitializeComponent();
+            _presenter = new SatisListePresenter(this);
+        }
+
+        public void SetSatislar(object satislar)
+        {
+            dgvSatislar.DataSource = satislar;
         }
 
         private void SatislarForm_Load(object sender, EventArgs e)
         {
-            using (var context = new GaleriContext())
-            {
-                var satislar = context.Satislar
-                    .Select(s => new
-                    {
-                        ID = s.Id,
-                        Plaka = s.Arac.Plaka,
-                        Marka = s.Arac.Marka,
-                        Model = s.Arac.Model,
-                        Yil = s.Arac.Yil,
-                        Alici = s.Alici.Ad + " " + s.Alici.Soyad,
-                        Satici = s.Satici.KullaniciAdi,
-                        Fiyat = s.SatisFiyati,
-                        Tarih = s.Tarih
-                    })
-                    .ToList();
-
-                dgvSatislar.DataSource = satislar;
-            }
-        }
-
-        private void dgvSatislar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            _presenter.LoadSatislar();
         }
     }
 }

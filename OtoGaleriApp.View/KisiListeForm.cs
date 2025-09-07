@@ -1,34 +1,27 @@
-﻿using OtoGaleriApp.DataAccess;
-using System;
-using System.Linq;
+﻿using System;
 using System.Windows.Forms;
 
 namespace OtoGaleriApp.View
 {
-    public partial class KisiListeForm : Form
+    public partial class KisiListeForm : Form, IKisiListeView
     {
+        private readonly KisiListePresenter _presenter;
+
         public KisiListeForm()
         {
             InitializeComponent();
+            _presenter = new KisiListePresenter(this);
         }
 
         private void KisiListeForm_Load(object sender, EventArgs e)
         {
-            using (var context = new GaleriContext())
-            {
-                var kisiler = context.Kisiler
-                    .Select(k => new
-                    {
-                        k.Id,
-                        k.Ad,
-                        k.Soyad,
-                        k.TC,
-                        k.Telefon
-                    })
-                    .ToList();
+            _presenter.KisileriYukle();
+        }
 
-                dataGridViewKisiler.DataSource = kisiler;
-            }
+        // View implementasyonu
+        public void SetKisiler(object kisiler)
+        {
+            dataGridViewKisiler.DataSource = kisiler;
         }
     }
 }

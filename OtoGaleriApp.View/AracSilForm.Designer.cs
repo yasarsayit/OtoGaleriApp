@@ -54,24 +54,26 @@
             this.cmbAraclar.Name = "cmbAraclar";
             this.cmbAraclar.Size = new System.Drawing.Size(454, 28);
             this.cmbAraclar.TabIndex = 1;
-            this.cmbAraclar.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            //this.cmbAraclar.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btnSil
             // 
             this.btnSil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSil.BackColor = System.Drawing.SystemColors.Info;
             this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSil.Location = new System.Drawing.Point(375, 173);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(125, 40);
             this.btnSil.TabIndex = 2;
             this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click_1);
+            this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // AracSilForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.cmbAraclar);

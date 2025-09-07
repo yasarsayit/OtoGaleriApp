@@ -47,151 +47,164 @@ namespace OtoGaleriApp.View
             // btnAracEkle
             // 
             this.btnAracEkle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAracEkle.BackColor = System.Drawing.SystemColors.Info;
             this.btnAracEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAracEkle.Location = new System.Drawing.Point(12, 12);
             this.btnAracEkle.Name = "btnAracEkle";
             this.btnAracEkle.Size = new System.Drawing.Size(225, 160);
             this.btnAracEkle.TabIndex = 10;
             this.btnAracEkle.Text = "\tAraç Ekle";
-            this.btnAracEkle.UseVisualStyleBackColor = true;
+            this.btnAracEkle.UseVisualStyleBackColor = false;
             this.btnAracEkle.Click += new System.EventHandler(this.btnAracEkle_Click);
             // 
             // btnAracSil
             // 
             this.btnAracSil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAracSil.BackColor = System.Drawing.SystemColors.Info;
             this.btnAracSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAracSil.Location = new System.Drawing.Point(504, 12);
             this.btnAracSil.Name = "btnAracSil";
             this.btnAracSil.Size = new System.Drawing.Size(225, 160);
             this.btnAracSil.TabIndex = 11;
             this.btnAracSil.Text = "\tAraç Sil";
-            this.btnAracSil.UseVisualStyleBackColor = true;
+            this.btnAracSil.UseVisualStyleBackColor = false;
             this.btnAracSil.Click += new System.EventHandler(this.btnAracSil_Click);
             // 
             // btnAracGuncelle
             // 
             this.btnAracGuncelle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAracGuncelle.BackColor = System.Drawing.SystemColors.Info;
             this.btnAracGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAracGuncelle.Location = new System.Drawing.Point(258, 12);
             this.btnAracGuncelle.Name = "btnAracGuncelle";
             this.btnAracGuncelle.Size = new System.Drawing.Size(225, 160);
             this.btnAracGuncelle.TabIndex = 12;
             this.btnAracGuncelle.Text = "Araç Güncelle";
-            this.btnAracGuncelle.UseVisualStyleBackColor = true;
+            this.btnAracGuncelle.UseVisualStyleBackColor = false;
             this.btnAracGuncelle.Click += new System.EventHandler(this.btnAracGuncelle_Click);
             // 
             // btnSatisYap
             // 
             this.btnSatisYap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSatisYap.BackColor = System.Drawing.SystemColors.Info;
             this.btnSatisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSatisYap.Location = new System.Drawing.Point(12, 381);
             this.btnSatisYap.Name = "btnSatisYap";
             this.btnSatisYap.Size = new System.Drawing.Size(225, 160);
             this.btnSatisYap.TabIndex = 13;
             this.btnSatisYap.Text = "Satış Yap";
-            this.btnSatisYap.UseVisualStyleBackColor = true;
+            this.btnSatisYap.UseVisualStyleBackColor = false;
             this.btnSatisYap.Click += new System.EventHandler(this.btnSatisYap_Click);
             // 
             // btnKisiEkle
             // 
             this.btnKisiEkle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKisiEkle.BackColor = System.Drawing.SystemColors.Info;
             this.btnKisiEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKisiEkle.Location = new System.Drawing.Point(12, 194);
             this.btnKisiEkle.Name = "btnKisiEkle";
             this.btnKisiEkle.Size = new System.Drawing.Size(225, 160);
             this.btnKisiEkle.TabIndex = 14;
             this.btnKisiEkle.Text = "Kişi Ekle";
-            this.btnKisiEkle.UseVisualStyleBackColor = true;
+            this.btnKisiEkle.UseVisualStyleBackColor = false;
             this.btnKisiEkle.Click += new System.EventHandler(this.btnKisiEkle_Click);
             // 
             // btSatislar
             // 
             this.btSatislar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btSatislar.BackColor = System.Drawing.SystemColors.Info;
             this.btSatislar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btSatislar.Location = new System.Drawing.Point(745, 381);
             this.btSatislar.Name = "btSatislar";
             this.btSatislar.Size = new System.Drawing.Size(225, 160);
             this.btSatislar.TabIndex = 15;
             this.btSatislar.Text = "Satışlar";
-            this.btSatislar.UseVisualStyleBackColor = true;
+            this.btSatislar.UseVisualStyleBackColor = false;
             this.btSatislar.Click += new System.EventHandler(this.btnSatislar_Click);
             // 
             // btnKisiSil
             // 
             this.btnKisiSil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKisiSil.BackColor = System.Drawing.SystemColors.Info;
             this.btnKisiSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKisiSil.Location = new System.Drawing.Point(504, 194);
             this.btnKisiSil.Name = "btnKisiSil";
             this.btnKisiSil.Size = new System.Drawing.Size(225, 160);
             this.btnKisiSil.TabIndex = 19;
             this.btnKisiSil.Text = "Kişi Sil";
-            this.btnKisiSil.UseVisualStyleBackColor = true;
+            this.btnKisiSil.UseVisualStyleBackColor = false;
             this.btnKisiSil.Click += new System.EventHandler(this.btnKisiSil_Click);
             // 
             // btnKisiGüncelle
             // 
             this.btnKisiGüncelle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKisiGüncelle.BackColor = System.Drawing.SystemColors.Info;
             this.btnKisiGüncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKisiGüncelle.Location = new System.Drawing.Point(258, 194);
             this.btnKisiGüncelle.Name = "btnKisiGüncelle";
             this.btnKisiGüncelle.Size = new System.Drawing.Size(225, 160);
             this.btnKisiGüncelle.TabIndex = 20;
             this.btnKisiGüncelle.Text = "Kişi Güncelle";
-            this.btnKisiGüncelle.UseVisualStyleBackColor = true;
+            this.btnKisiGüncelle.UseVisualStyleBackColor = false;
             this.btnKisiGüncelle.Click += new System.EventHandler(this.btnKisiGuncelle_Click);
             // 
             // btnKisiler
             // 
             this.btnKisiler.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKisiler.BackColor = System.Drawing.SystemColors.Info;
             this.btnKisiler.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKisiler.Location = new System.Drawing.Point(745, 194);
             this.btnKisiler.Name = "btnKisiler";
             this.btnKisiler.Size = new System.Drawing.Size(225, 160);
             this.btnKisiler.TabIndex = 21;
             this.btnKisiler.Text = "Kişiler";
-            this.btnKisiler.UseVisualStyleBackColor = true;
+            this.btnKisiler.UseVisualStyleBackColor = false;
             this.btnKisiler.Click += new System.EventHandler(this.btnKisiler_Click);
             // 
             // btnSatisSil
             // 
             this.btnSatisSil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSatisSil.BackColor = System.Drawing.SystemColors.Info;
             this.btnSatisSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSatisSil.Location = new System.Drawing.Point(504, 381);
             this.btnSatisSil.Name = "btnSatisSil";
             this.btnSatisSil.Size = new System.Drawing.Size(225, 160);
             this.btnSatisSil.TabIndex = 22;
             this.btnSatisSil.Text = "Satış Sil";
-            this.btnSatisSil.UseVisualStyleBackColor = true;
+            this.btnSatisSil.UseVisualStyleBackColor = false;
             this.btnSatisSil.Click += new System.EventHandler(this.btnSatisSil_Click);
             // 
             // btnSatisGuncelle
             // 
             this.btnSatisGuncelle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSatisGuncelle.BackColor = System.Drawing.SystemColors.Info;
             this.btnSatisGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSatisGuncelle.Location = new System.Drawing.Point(258, 381);
             this.btnSatisGuncelle.Name = "btnSatisGuncelle";
             this.btnSatisGuncelle.Size = new System.Drawing.Size(225, 160);
             this.btnSatisGuncelle.TabIndex = 23;
             this.btnSatisGuncelle.Text = "Satış Güncelle";
-            this.btnSatisGuncelle.UseVisualStyleBackColor = true;
+            this.btnSatisGuncelle.UseVisualStyleBackColor = false;
             this.btnSatisGuncelle.Click += new System.EventHandler(this.btnSatisGuncelle_Click);
             // 
             // btnAraclar
             // 
             this.btnAraclar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAraclar.BackColor = System.Drawing.SystemColors.Info;
             this.btnAraclar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAraclar.Location = new System.Drawing.Point(745, 12);
             this.btnAraclar.Name = "btnAraclar";
             this.btnAraclar.Size = new System.Drawing.Size(225, 160);
             this.btnAraclar.TabIndex = 24;
             this.btnAraclar.Text = "Araçlar";
-            this.btnAraclar.UseVisualStyleBackColor = true;
+            this.btnAraclar.UseVisualStyleBackColor = false;
             this.btnAraclar.Click += new System.EventHandler(this.btnAraclar_Click);
             // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(982, 553);
             this.Controls.Add(this.btnAraclar);
             this.Controls.Add(this.btnSatisGuncelle);

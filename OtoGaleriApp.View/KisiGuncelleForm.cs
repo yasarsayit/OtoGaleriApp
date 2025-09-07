@@ -1,142 +1,85 @@
-﻿using OtoGaleriApp.DataAccess;
+﻿using OtoGaleriApp.Interfaces;
+using OtoGaleriApp.Presenter;
 using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace OtoGaleriApp.View
 {
-    public partial class KisiGuncelleForm : Form
+    public partial class KisiGuncelleForm : Form, IKisiGuncelleView
     {
+        private readonly KisiGuncellePresenter _presenter;
+        private bool _loading = false;
+
         public KisiGuncelleForm()
         {
             InitializeComponent();
+            _presenter = new KisiGuncellePresenter(this);
+            cmbKisiler.SelectionChangeCommitted += cmbKisiler_SelectionChangeCommitted;
         }
 
-        // ------ Yardımcılar ------
-        private bool IsAllDigits(string s) =>
-            !string.IsNullOrWhiteSpace(s) && s.All(char.IsDigit);
-
-        private bool IsValidTckn(string tckn) =>
-            IsAllDigits(tckn) && tckn.Length == 11;
-
-        private bool IsValidPhone10NoLeadingZero(string phone) =>
-            IsAllDigits(phone) && phone.Length == 10 && phone[0] != '0';
-
-        private void DigitsOnly_KeyPress(object sender, KeyPressEventArgs e)
+        public int SecilenKisiId
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-                e.Handled = true;
+            get
+            {
+                if (cmbKisiler.SelectedValue == null) return 0;
+                if (cmbKisiler.SelectedValue is int) return (int)cmbKisiler.SelectedValue;
+                if (int.TryParse(cmbKisiler.SelectedValue.ToString(), out int id)) return id;
+                return 0;
+            }
+        }
+
+        
+
+
+        public string Ad => txtAd.Text;
+        public string Soyad => txtSoyad.Text;
+        public string TC => txtTC.Text;
+        public string Telefon => txtTelefon.Text;
+
+        public void ShowMessage(string message) => MessageBox.Show(message);
+        public void CloseForm() => this.Close();
+
+        public void SetKisiler(object kisiler)
+        {
+            _loading = true;
+            cmbKisiler.DataSource = null;
+            cmbKisiler.DisplayMember = "Id"; 
+            cmbKisiler.ValueMember = "Id";
+            cmbKisiler.DataSource = kisiler;
+            _loading = false;
+        }
+
+
+
+
+        public void SetFormFields(string ad, string soyad, string tc, string telefon)
+        {
+            txtAd.Text = ad;
+            txtSoyad.Text = soyad;
+            txtTC.Text = tc;
+            txtTelefon.Text = telefon;
         }
 
         private void KisiGuncelleForm_Load(object sender, EventArgs e)
         {
-            txtTC.KeyPress += DigitsOnly_KeyPress;
-            txtTelefon.KeyPress += DigitsOnly_KeyPress;
-
-            using (var context = new GaleriContext())
-            {
-                var kisiler = context.Kisiler
-                    .Select(k => new { k.Id, AdSoyad = k.Ad + " " + k.Soyad })
-                    .ToList();
-
-                cmbKisiler.DataSource = kisiler;
-                cmbKisiler.DisplayMember = "AdSoyad";
-                cmbKisiler.ValueMember = "Id";
-            }
+            _presenter.Yukle();
+            if (SecilenKisiId != 0)
+                _presenter.KisiSecildi();
         }
 
-        private void cmbKisiler_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void cmbKisiler_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (cmbKisiler.SelectedValue != null &&
-                int.TryParse(cmbKisiler.SelectedValue.ToString(), out int secilenId))
-            {
-                using (var context = new GaleriContext())
-                {
-                    var kisi = context.Kisiler.Find(secilenId);
-                    if (kisi != null)
-                    {
-                        txtAd.Text = kisi.Ad;
-                        txtSoyad.Text = kisi.Soyad;
-                        txtTC.Text = kisi.TC.ToString();
-                        txtTelefon.Text = kisi.Telefon;
-                    }
-                }
-            }
+            if (_loading) return;
+            if (SecilenKisiId != 0)
+                _presenter.KisiSecildi();
         }
 
-        private void btnKisiGuncelle_Click(object sender, EventArgs e)
+
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if (cmbKisiler.SelectedValue == null ||
-                !int.TryParse(cmbKisiler.SelectedValue.ToString(), out int secilenId))
-            {
-                MessageBox.Show("Lütfen güncellenecek kişiyi seçiniz.");
-                return;
-            }
-
-            var tcknText = txtTC.Text?.Trim();
-            var telText = txtTelefon.Text?.Trim();
-
-            // --- Doğrulamalar ---
-            if (!IsValidTckn(tcknText))
-            {
-                MessageBox.Show("T.C. Kimlik Numarası 11 haneli olmalı ve sadece rakamlardan oluşmalıdır.",
-                    "Geçersiz TCKN", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTC.Focus(); txtTC.SelectAll();
-                return;
-            }
-
-            if (!IsValidPhone10NoLeadingZero(telText))
-            {
-                MessageBox.Show("Telefon numarasını başında 0 olmadan 10 haneli giriniz (örn: 5301234567).",
-                    "Geçersiz Telefon", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtTelefon.Focus(); txtTelefon.SelectAll();
-                return;
-            }
-
-            try
-            {
-                long tcLong = long.Parse(tcknText);
-
-                using (var context = new GaleriContext())
-                {
-                    var kisi = context.Kisiler.Find(secilenId);
-                    if (kisi == null)
-                    {
-                        MessageBox.Show("Kişi bulunamadı.");
-                        return;
-                    }
-
-                    // --- TEKİLLİK KONTROLLERİ (kendisi hariç) ---
-                    bool existsByTc = context.Kisiler.Any(k => k.Id != secilenId && k.TC == (int)tcLong);
-                    bool existsByTel = context.Kisiler.Any(k => k.Id != secilenId && k.Telefon == telText);
-
-                    if (existsByTc || existsByTel)
-                    {
-                        string msg = "Güncelleme yapılamadı:";
-                        if (existsByTc) msg += "\n- Bu T.C. Kimlik Numarası başka bir kişide kayıtlı.";
-                        if (existsByTel) msg += "\n- Bu telefon numarası başka bir kişide kayıtlı.";
-                        MessageBox.Show(msg, "Çakışan Kayıt", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                    // güncelle
-                    kisi.Ad = txtAd.Text?.Trim();
-                    kisi.Soyad = txtSoyad.Text?.Trim();
-                    kisi.TC = (int)tcLong;     // model int ise
-                    kisi.Telefon = telText;
-
-                    context.SaveChanges();
-                    MessageBox.Show("Kişi başarıyla güncellendi.");
-                    this.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Hata: " + ex.Message);
-            }
+            _presenter.Guncelle();
         }
-
-        private void label1_Click(object sender, EventArgs e) { }
-        private void lblTelefon_Click(object sender, EventArgs e) { }
     }
 }

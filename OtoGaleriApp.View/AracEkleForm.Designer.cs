@@ -50,7 +50,6 @@
             this.lblMarka.Size = new System.Drawing.Size(92, 36);
             this.lblMarka.TabIndex = 0;
             this.lblMarka.Text = "Marka:";
-            this.lblMarka.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblModel
             // 
@@ -122,14 +121,15 @@
             // btnEkle
             // 
             this.btnEkle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEkle.BackColor = System.Drawing.SystemColors.Info;
             this.btnEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnEkle.Location = new System.Drawing.Point(465, 399);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(142, 37);
             this.btnEkle.TabIndex = 8;
             this.btnEkle.Text = "Araç Ekle";
-            this.btnEkle.UseVisualStyleBackColor = true;
-            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
+            this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // lblDurum
             // 
@@ -156,6 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(982, 553);
             this.Controls.Add(this.chkSatildi);
             this.Controls.Add(this.lblDurum);

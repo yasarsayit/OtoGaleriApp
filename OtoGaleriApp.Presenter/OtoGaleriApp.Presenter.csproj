@@ -51,8 +51,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AracEklePresenter.cs" />
+    <Compile Include="AracGuncellePresenter.cs" />
+    <Compile Include="AracPresenter.cs" />
+    <Compile Include="AracSilPresenter.cs" />
     <Compile Include="GirisPresenter.cs" />
+    <Compile Include="KisiEklePresenter.cs" />
+    <Compile Include="KisiGuncellePresenter.cs" />
+    <Compile Include="KisiListePresenter.cs" />
+    <Compile Include="KisiSilPresenter.cs" />
+    <Compile Include="KullaniciEklePresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SatisGuncellePresenter.cs" />
+    <Compile Include="SatisListePresenter.cs" />
+    <Compile Include="SatisSilPresenter.cs" />
+    <Compile Include="SatisYapPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OtoGaleriApp.DataAccess\OtoGaleriApp.DataAccess.csproj">

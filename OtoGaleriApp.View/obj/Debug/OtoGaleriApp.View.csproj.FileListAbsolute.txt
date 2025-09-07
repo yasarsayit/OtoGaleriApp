@@ -1,3 +1,4 @@
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.csproj.AssemblyReference.cache
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\bin\Debug\OtoGaleriApp.View.exe.config
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\bin\Debug\OtoGaleriApp.View.exe
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\bin\Debug\OtoGaleriApp.View.pdb
@@ -13,10 +14,10 @@ C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\bin\Debug\OtoG
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\bin\Debug\OtoGaleriApp.Presenter.dll.config
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\bin\Debug\EntityFramework.xml
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.csproj.AssemblyReference.cache
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.AnaForm.resources
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.AracEkleForm.resources
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.AracGuncelleForm.resources
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.AracListeleForm.resources
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.AracSilForm.resources
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.GirisForm.resources
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.KisiEkleForm.resources
@@ -25,6 +26,7 @@ C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoG
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.KisiSilForm.resources
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.KullaniciEkleForm.resources
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.Properties.Resources.resources
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.SatisGuncelleForm.resources
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.SatislarForm.resources
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.SatisSilForm.resources
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.SatisYapForm.resources
@@ -33,5 +35,4 @@ C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoG
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaler.0C154881.Up2Date
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.exe
 C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.pdb
-C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.SatisGuncelleForm.resources
-C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.AracListeleForm.resources
+C:\Users\YAŞAR SAYIT\source\repos\OtoGaleriApp\OtoGaleriApp.View\obj\Debug\OtoGaleriApp.View.exe.config

@@ -12,7 +12,6 @@ namespace OtoGaleriApp.Model
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string Telefon { get; set; }
-        public int TC { get; set; }
+        public string TC { get; set; } // artık string olarak
     }
 }
-

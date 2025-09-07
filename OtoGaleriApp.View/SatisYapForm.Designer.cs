@@ -92,13 +92,14 @@
             // btnSatisYap
             // 
             this.btnSatisYap.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSatisYap.BackColor = System.Drawing.SystemColors.Info;
             this.btnSatisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSatisYap.Location = new System.Drawing.Point(390, 317);
             this.btnSatisYap.Name = "btnSatisYap";
             this.btnSatisYap.Size = new System.Drawing.Size(140, 35);
             this.btnSatisYap.TabIndex = 5;
             this.btnSatisYap.Text = "Satış Yap";
-            this.btnSatisYap.UseVisualStyleBackColor = true;
+            this.btnSatisYap.UseVisualStyleBackColor = false;
             this.btnSatisYap.Click += new System.EventHandler(this.btnSatisYap_Click);
             // 
             // lblAraclar
@@ -133,7 +134,7 @@
             this.lblSatici.Size = new System.Drawing.Size(63, 20);
             this.lblSatici.TabIndex = 8;
             this.lblSatici.Text = "Satıcı:";
-            this.lblSatici.Click += new System.EventHandler(this.label3_Click);
+            this.lblSatici.Click += new System.EventHandler(this.btnSatisYap_Click);
             // 
             // lblFiyat
             // 
@@ -161,6 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblTarih);
             this.Controls.Add(this.lblFiyat);

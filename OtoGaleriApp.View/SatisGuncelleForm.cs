@@ -1,118 +1,99 @@
-﻿using OtoGaleriApp.DataAccess;
+﻿using OtoGaleriApp.Interfaces;
 using OtoGaleriApp.Model;
+using OtoGaleriApp.Presenter;
 using System;
-using System.Data.Entity;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace OtoGaleriApp.View
 {
-    public partial class SatisGuncelleForm : Form
+    public partial class SatisGuncelleForm : Form, ISatisGuncelleView
     {
+        private readonly SatisGuncellePresenter _presenter;
+
         public SatisGuncelleForm()
         {
             InitializeComponent();
+            _presenter = new SatisGuncellePresenter(this);
+        }
+
+        public int SecilenSatisId => cmbSatislar.SelectedValue != null ? Convert.ToInt32(cmbSatislar.SelectedValue) : 0;
+        public int SecilenAracId => cmbArac.SelectedValue != null ? Convert.ToInt32(cmbArac.SelectedValue) : 0;
+        public int SecilenAliciId => cmbAlici.SelectedValue != null ? Convert.ToInt32(cmbAlici.SelectedValue) : 0;
+        public int SecilenSaticiId => cmbSatici.SelectedValue != null ? Convert.ToInt32(cmbSatici.SelectedValue) : 0;
+        public decimal Fiyat => decimal.TryParse(txtFiyat.Text, out var f) ? f : 0;
+        public DateTime Tarih => dtpTarih.Value;
+
+        public void ShowMessage(string message) => MessageBox.Show(message);
+        public void CloseForm() => this.Close();
+
+        public void SetAraclar(object dataSource)
+        {
+            cmbArac.DataSource = dataSource;
+            cmbArac.DisplayMember = "Gosterim";
+            cmbArac.ValueMember = "Id";
+        }
+
+        public void SetKisiler(object dataSource)
+        {
+            cmbAlici.DataSource = dataSource;
+            cmbAlici.DisplayMember = "AdSoyad";
+            cmbAlici.ValueMember = "Id";
+        }
+
+        public void SetKullanicilar(object dataSource)
+        {
+            cmbSatici.DataSource = dataSource;
+            cmbSatici.DisplayMember = "KullaniciAdi";
+            cmbSatici.ValueMember = "Id";
+        }
+
+        public void SetSatislar(object dataSource)
+        {
+            cmbSatislar.DataSource = dataSource;
+            cmbSatislar.DisplayMember = "Aciklama"; 
+            cmbSatislar.ValueMember = "Id";
+        }
+
+        public void SetSelectedSatis(object satis)
+        {
+            if (satis is Satis s)
+            {
+                cmbArac.SelectedValue = s.AracId;
+                cmbAlici.SelectedValue = s.AliciId;
+                cmbSatici.SelectedValue = s.SaticiId;
+                txtFiyat.Text = s.SatisFiyati.ToString();
+                dtpTarih.Value = s.Tarih;
+            }
         }
 
         private void SatisGuncelleForm_Load(object sender, EventArgs e)
         {
-            using (var context = new GaleriContext())
+            _presenter.LoadData();
+
+            
+            cmbSatislar.SelectedIndexChanged -= cmbSatislar_SelectedIndexChanged;
+            if (cmbSatislar.Items.Count > 0)
             {
-                // Satış listesi
-                var satislar = context.Satislar
-                    .Include(s => s.Alici)
-                    .Include(s => s.Satici)
-                    .Include(s => s.Arac)
-                    .ToList();
-
-                cmbSatislar.DataSource = satislar;
-                cmbSatislar.DisplayMember = "Id";
-                cmbSatislar.ValueMember = "Id";
-
-                cmbAlici.DataSource = context.Kisiler
-                    .Select(k => new { k.Id, AdSoyad = k.Ad + " " + k.Soyad })
-                    .ToList();
-                cmbAlici.DisplayMember = "AdSoyad";
-                cmbAlici.ValueMember = "Id";
-
-                cmbSatici.DataSource = context.Kullanicilar
-                    .Select(u => new { u.Id, u.KullaniciAdi })
-                    .ToList();
-                cmbSatici.DisplayMember = "KullaniciAdi";
-                cmbSatici.ValueMember = "Id";
-
-                cmbArac.DataSource = context.Araclar
-                    .Select(a => new { a.Id, a.Plaka })
-                    .ToList();
-                cmbArac.DisplayMember = "Plaka";
-                cmbArac.ValueMember = "Id";
+                cmbSatislar.SelectedIndex = 0;
+                _presenter.SatisSecildi();
             }
+            cmbSatislar.SelectedIndexChanged += cmbSatislar_SelectedIndexChanged;
         }
 
         private void cmbSatislar_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbSatislar.SelectedItem is Satis secilen)
+            if (cmbSatislar.SelectedValue == null) return;
+
+            int id;
+            if (int.TryParse(cmbSatislar.SelectedValue.ToString(), out id) && id > 0)
             {
-                cmbAlici.SelectedValue = secilen.AliciId;
-                cmbSatici.SelectedValue = secilen.SaticiId;
-                cmbArac.SelectedValue = secilen.AracId;
-                txtFiyat.Text = secilen.SatisFiyati.ToString();
-                dtpTarih.Value = secilen.Tarih;
+                _presenter.SatisSecildi();
             }
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            if (cmbSatislar.SelectedItem == null) return;
-
-            int satisId = (int)cmbSatislar.SelectedValue;
-
-            using (var context = new GaleriContext())
-            {
-                var satis = context.Satislar.Find(satisId);
-                if (satis == null)
-                {
-                    MessageBox.Show("Satış bulunamadı.");
-                    return;
-                }
-
-                satis.AliciId = (int)cmbAlici.SelectedValue;
-                satis.SaticiId = (int)cmbSatici.SelectedValue;
-                satis.AracId = (int)cmbArac.SelectedValue;
-                satis.SatisFiyati = decimal.Parse(txtFiyat.Text);
-                satis.Tarih = dtpTarih.Value;
-
-                context.SaveChanges();
-                MessageBox.Show("Satış başarıyla güncellendi.");
-                this.Close();
-            }
-        }
-
-        private void btnGuncelle_Click_1(object sender, EventArgs e)
-        {
-            if (cmbSatislar.SelectedItem == null) return;
-
-            int satisId = (int)cmbSatislar.SelectedValue;
-
-            using (var context = new GaleriContext())
-            {
-                var satis = context.Satislar.Find(satisId);
-                if (satis == null)
-                {
-                    MessageBox.Show("Satış bulunamadı.");
-                    return;
-                }
-
-                satis.AliciId = (int)cmbAlici.SelectedValue;
-                satis.SaticiId = (int)cmbSatici.SelectedValue;
-                satis.AracId = (int)cmbArac.SelectedValue;
-                satis.SatisFiyati = decimal.Parse(txtFiyat.Text);
-                satis.Tarih = dtpTarih.Value;
-
-                context.SaveChanges();
-                MessageBox.Show("Satış başarıyla güncellendi.");
-                this.Close();
-            }
+            _presenter.SatisGuncelle();
         }
     }
 }

@@ -1,63 +1,47 @@
-﻿using OtoGaleriApp.DataAccess;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using OtoGaleriApp.Interfaces;
+using OtoGaleriApp.Presenter;
 
 namespace OtoGaleriApp.View
 {
-    public partial class KisiSilForm : Form
+    public partial class KisiSilForm : Form, IKisiSilView
     {
+        private readonly KisiSilPresenter _presenter;
+
         public KisiSilForm()
         {
             InitializeComponent();
+            _presenter = new KisiSilPresenter(this);
         }
 
         private void KisiSilForm_Load(object sender, EventArgs e)
         {
-            using (var context = new GaleriContext())
-            {
-                var kisiler = context.Kisiler
-                    .Select(k => new { k.Id, AdSoyad = k.Ad + " " + k.Soyad })
-                    .ToList();
-
-                cmbKisiler.DataSource = kisiler;
-                cmbKisiler.DisplayMember = "AdSoyad";
-                cmbKisiler.ValueMember = "Id";
-            }
+            _presenter.Yukle();
         }
 
-        private void btnKisiSil_Click(object sender, EventArgs e)
+        private void btnSil_Click(object sender, EventArgs e)
         {
-            if (cmbKisiler.SelectedValue != null)
+            if (cmbKisiler.SelectedItem == null)
             {
-                int secilenId = (int)cmbKisiler.SelectedValue;
-
-                using (var context = new GaleriContext())
-                {
-                    var kisi = context.Kisiler.Find(secilenId);
-
-                    if (kisi != null)
-                    {
-                        context.Kisiler.Remove(kisi);
-                        context.SaveChanges();
-                        MessageBox.Show("Kişi başarıyla silindi.");
-
-                        this.Close(); // Formu kapat
-                    }
-                    else
-                    {
-                        MessageBox.Show("Kişi bulunamadı.");
-                    }
-                }
+                MessageBox.Show("Lütfen silinecek kişiyi seçin.");
+                return;
             }
+
+            _presenter.KisiSil();
+            MessageBox.Show("Kişi başarıyla silindi.");
+            this.Close();
         }
 
-    }
+        
+        public void SetKisiler(List<object> kisiler)
+        {
+            cmbKisiler.DataSource = kisiler;
+            cmbKisiler.DisplayMember = "Gosterim";
+            cmbKisiler.ValueMember = "Id";
+        }
 
+        public int SecilenKisiId => (int)cmbKisiler.SelectedValue;
+    }
 }

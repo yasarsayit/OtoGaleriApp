@@ -1,141 +1,89 @@
-﻿using OtoGaleriApp.DataAccess;
+﻿using OtoGaleriApp.Interfaces;
+using OtoGaleriApp.Presenter;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OtoGaleriApp.View
 {
-    public partial class AracGuncelleForm : Form
+    public partial class AracGuncelleForm : Form, IAracGuncelleView
     {
-        private AnaForm _anaForm;
-        private int _aracId;
+        private readonly AracGuncellePresenter _presenter;
 
         public AracGuncelleForm()
         {
             InitializeComponent();
+            _presenter = new AracGuncellePresenter(this);
         }
 
-        public AracGuncelleForm(AnaForm anaForm, int aracId)
+        public int SecilenAracId
         {
-            InitializeComponent();
-            _anaForm = anaForm;
-            _aracId = aracId;
+            get
+            {
+                if (cmbAraclar.SelectedValue == null) return 0;
+
+                
+                if (cmbAraclar.SelectedValue is int id)
+                    return id;
+
+                
+                try
+                {
+                    return (int)cmbAraclar.SelectedValue;
+                }
+                catch
+                {
+                    return 0;
+                }
+            }
         }
+
+
+        public string Marka => txtMarka.Text;
+        public string Model => txtModel.Text;
+        public string Plaka => txtPlaka.Text;
+        public string Yil => txtYil.Text;
+        public bool Durum => chkDurum.Checked;
+
+        public void SetAraclar(object dataSource)
+        {
+            cmbAraclar.DataSource = dataSource;
+            cmbAraclar.DisplayMember = "Aciklama"; 
+            cmbAraclar.ValueMember = "Id";
+        }
+
+        public void SetFormFields(string marka, string model, string plaka, string yil, bool durum)
+        {
+            txtMarka.Text = marka;
+            txtModel.Text = model;
+            txtPlaka.Text = plaka;
+            txtYil.Text = yil;
+            chkDurum.Checked = durum;
+        }
+
+        public void ShowMessage(string message) => MessageBox.Show(message);
+        public void CloseForm() => this.Close();
 
         private void AracGuncelleForm_Load(object sender, EventArgs e)
         {
-            using (var context = new GaleriContext())
-            {
-                var araclar = context.Araclar
-                    .Select(a => new { a.Id, a.Plaka, a.Model })
-                    .ToList();
+            _presenter.Yukle();
 
-                cmbAraclar.DataSource = araclar;
-                cmbAraclar.DisplayMember = "Plaka";
-                cmbAraclar.ValueMember = "Id";
-                cmbAraclar.ValueMember = "Model";
+            if (cmbAraclar.Items.Count > 0)
+            {
+                cmbAraclar.SelectedIndexChanged -= cmbAraclar_SelectedIndexChanged;
+                cmbAraclar.SelectedIndex = 0;
+                _presenter.AracSecildi();
+                cmbAraclar.SelectedIndexChanged += cmbAraclar_SelectedIndexChanged;
             }
         }
 
-
-
-
+        private void cmbAraclar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _presenter.AracSecildi();
+        }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            int secilenId = (int)cmbAraclar.SelectedValue;
-
-            using (var context = new GaleriContext())
-            {
-                var arac = context.Araclar.Find(secilenId);
-                if (arac != null)
-                {
-                    arac.Marka = txtMarka.Text;
-                    arac.Model = txtModel.Text;
-                    arac.Plaka = txtPlaka.Text;
-                    arac.Yil = int.Parse(txtYil.Text);
-                    arac.Durum = chkDurum.Checked;
-
-                    context.SaveChanges();
-                    MessageBox.Show("Araç başarıyla güncellendi.");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Araç bulunamadı.");
-                }
-            }
-        }
-
-
-        private void cmbAraclar_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            if (cmbAraclar.SelectedItem == null)
-                return;
-
-            dynamic secilenArac = cmbAraclar.SelectedItem;
-            int secilenId = secilenArac.Id;
-
-            using (var context = new GaleriContext())
-            {
-                var arac = context.Araclar.Find(secilenId);
-                if (arac != null)
-                {
-                    txtMarka.Text = arac.Marka;
-                    txtModel.Text = arac.Model;
-                    txtPlaka.Text = arac.Plaka;
-                    txtYil.Text = arac.Yil.ToString();
-                    chkDurum.Checked = arac.Durum;
-                }
-            }
-        }
-
-        private void btnGuncelle_Click_1(object sender, EventArgs e)
-        {
-            int secilenId = (int)cmbAraclar.SelectedValue;
-
-            using (var context = new GaleriContext())
-            {
-                var arac = context.Araclar.Find(secilenId);
-                if (arac != null)
-                {
-                    arac.Marka = txtMarka.Text;
-                    arac.Model = txtModel.Text;
-                    arac.Plaka = txtPlaka.Text;
-                    arac.Yil = int.Parse(txtYil.Text);
-                    arac.Durum = chkDurum.Checked;
-
-                    context.SaveChanges();
-                    MessageBox.Show("Araç başarıyla güncellendi.");
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Araç bulunamadı.");
-                }
-            }
-        }
-
-        private void cmbDurum_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblAraclar_Click(object sender, EventArgs e)
-        {
-
+            _presenter.Guncelle();
         }
     }
-
 }

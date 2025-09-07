@@ -90,33 +90,33 @@
             // btnKisiGuncelle
             // 
             this.btnKisiGuncelle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKisiGuncelle.BackColor = System.Drawing.SystemColors.Info;
             this.btnKisiGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKisiGuncelle.Location = new System.Drawing.Point(339, 339);
             this.btnKisiGuncelle.Name = "btnKisiGuncelle";
             this.btnKisiGuncelle.Size = new System.Drawing.Size(189, 45);
             this.btnKisiGuncelle.TabIndex = 5;
             this.btnKisiGuncelle.Text = "Kişi Güncelle";
-            this.btnKisiGuncelle.UseVisualStyleBackColor = true;
-            this.btnKisiGuncelle.Click += new System.EventHandler(this.btnKisiGuncelle_Click);
+            this.btnKisiGuncelle.UseVisualStyleBackColor = false;
+            this.btnKisiGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // lblAd
             // 
             this.lblAd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAd.AutoSize = true;
             this.lblAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAd.Location = new System.Drawing.Point(205, 114);
+            this.lblAd.Location = new System.Drawing.Point(202, 114);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(37, 20);
             this.lblAd.TabIndex = 6;
             this.lblAd.Text = "Ad:";
-            this.lblAd.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblSoyad
             // 
             this.lblSoyad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSoyad.AutoSize = true;
             this.lblSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSoyad.Location = new System.Drawing.Point(182, 170);
+            this.lblSoyad.Location = new System.Drawing.Point(175, 170);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(66, 20);
             this.lblSoyad.TabIndex = 7;
@@ -127,7 +127,7 @@
             this.lblTC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTC.AutoSize = true;
             this.lblTC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTC.Location = new System.Drawing.Point(207, 235);
+            this.lblTC.Location = new System.Drawing.Point(202, 235);
             this.lblTC.Name = "lblTC";
             this.lblTC.Size = new System.Drawing.Size(39, 20);
             this.lblTC.TabIndex = 8;
@@ -138,12 +138,11 @@
             this.lblTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTelefon.AutoSize = true;
             this.lblTelefon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTelefon.Location = new System.Drawing.Point(169, 300);
+            this.lblTelefon.Location = new System.Drawing.Point(164, 300);
             this.lblTelefon.Name = "lblTelefon";
             this.lblTelefon.Size = new System.Drawing.Size(77, 20);
             this.lblTelefon.TabIndex = 9;
             this.lblTelefon.Text = "Telefon:";
-            this.lblTelefon.Click += new System.EventHandler(this.lblTelefon_Click);
             // 
             // lblKisi
             // 
@@ -160,6 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblKisi);
             this.Controls.Add(this.lblTelefon);

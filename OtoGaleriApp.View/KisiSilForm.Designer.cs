@@ -46,14 +46,15 @@
             // btnKisiSil
             // 
             this.btnKisiSil.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnKisiSil.BackColor = System.Drawing.SystemColors.Info;
             this.btnKisiSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKisiSil.Location = new System.Drawing.Point(390, 202);
             this.btnKisiSil.Name = "btnKisiSil";
             this.btnKisiSil.Size = new System.Drawing.Size(109, 41);
             this.btnKisiSil.TabIndex = 1;
             this.btnKisiSil.Text = "Kişi Sil";
-            this.btnKisiSil.UseVisualStyleBackColor = true;
-            this.btnKisiSil.Click += new System.EventHandler(this.btnKisiSil_Click);
+            this.btnKisiSil.UseVisualStyleBackColor = false;
+            this.btnKisiSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // lblSilinecekKisi
             // 
@@ -70,6 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblSilinecekKisi);
             this.Controls.Add(this.btnKisiSil);

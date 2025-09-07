@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FA57BDB-687E-49E8-8F9B-4D9736AB3C61}|OtoGaleriApp.Model\\OtoGaleriApp.Model.csproj|C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\otogaleriapp.model\\ikisiguncelleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FA57BDB-687E-49E8-8F9B-4D9736AB3C61}|OtoGaleriApp.Model\\OtoGaleriApp.Model.csproj|solutionrelative:otogaleriapp.model\\ikisiguncelleview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9C14932-FCD9-4D3A-897A-24F62E8BAD6C}|OtoGaleriApp.Presenter\\OtoGaleriApp.Presenter.csproj|C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\otogaleriapp.presenter\\kisiguncellepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9C14932-FCD9-4D3A-897A-24F62E8BAD6C}|OtoGaleriApp.Presenter\\OtoGaleriApp.Presenter.csproj|solutionrelative:otogaleriapp.presenter\\kisiguncellepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E61D81FE-9BF6-4123-8815-3117A01CC0ED}|OtoGaleriApp.View\\OtoGaleriApp.View.csproj|c:\\users\\ya\u015Far sayit\\source\\repos\\otogaleriapp\\otogaleriapp.view\\kisiguncelleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E61D81FE-9BF6-4123-8815-3117A01CC0ED}|OtoGaleriApp.View\\OtoGaleriApp.View.csproj|solutionrelative:otogaleriapp.view\\kisiguncelleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E61D81FE-9BF6-4123-8815-3117A01CC0ED}|OtoGaleriApp.View\\OtoGaleriApp.View.csproj|C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\otogaleriapp.view\\kisiguncelleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E61D81FE-9BF6-4123-8815-3117A01CC0ED}|OtoGaleriApp.View\\OtoGaleriApp.View.csproj|solutionrelative:otogaleriapp.view\\kisiguncelleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 203,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KisiGuncelleForm.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\OtoGaleriApp.View\\KisiGuncelleForm.cs",
+              "RelativeDocumentMoniker": "OtoGaleriApp.View\\KisiGuncelleForm.cs",
+              "ToolTip": "C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\OtoGaleriApp.View\\KisiGuncelleForm.cs [Tasar\u0131m]",
+              "RelativeToolTip": "OtoGaleriApp.View\\KisiGuncelleForm.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T20:07:30.15Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KisiGuncelleForm.cs",
+              "DocumentMoniker": "C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\OtoGaleriApp.View\\KisiGuncelleForm.cs",
+              "RelativeDocumentMoniker": "OtoGaleriApp.View\\KisiGuncelleForm.cs",
+              "ToolTip": "C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\OtoGaleriApp.View\\KisiGuncelleForm.cs",
+              "RelativeToolTip": "OtoGaleriApp.View\\KisiGuncelleForm.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAcwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T19:23:42.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KisiGuncellePresenter.cs",
+              "DocumentMoniker": "C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\OtoGaleriApp.Presenter\\KisiGuncellePresenter.cs",
+              "RelativeDocumentMoniker": "OtoGaleriApp.Presenter\\KisiGuncellePresenter.cs",
+              "ToolTip": "C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\OtoGaleriApp.Presenter\\KisiGuncellePresenter.cs",
+              "RelativeToolTip": "OtoGaleriApp.Presenter\\KisiGuncellePresenter.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T19:23:39.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IKisiGuncelleView.cs",
+              "DocumentMoniker": "C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\OtoGaleriApp.Model\\IKisiGuncelleView.cs",
+              "RelativeDocumentMoniker": "OtoGaleriApp.Model\\IKisiGuncelleView.cs",
+              "ToolTip": "C:\\Users\\YA\u015EAR SAYIT\\source\\repos\\OtoGaleriApp\\OtoGaleriApp.Model\\IKisiGuncelleView.cs",
+              "RelativeToolTip": "OtoGaleriApp.Model\\IKisiGuncelleView.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T19:23:37.091Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

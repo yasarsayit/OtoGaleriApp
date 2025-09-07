@@ -82,14 +82,15 @@
             // btnGuncelle
             // 
             this.btnGuncelle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGuncelle.BackColor = System.Drawing.SystemColors.Info;
             this.btnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGuncelle.Location = new System.Drawing.Point(373, 329);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(117, 41);
             this.btnGuncelle.TabIndex = 5;
             this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click_1);
+            this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // cmbAraclar
             // 
@@ -100,7 +101,7 @@
             this.cmbAraclar.Name = "cmbAraclar";
             this.cmbAraclar.Size = new System.Drawing.Size(286, 28);
             this.cmbAraclar.TabIndex = 6;
-            this.cmbAraclar.SelectedIndexChanged += new System.EventHandler(this.cmbAraclar_SelectedIndexChanged_1);
+            this.cmbAraclar.SelectedIndexChanged += new System.EventHandler(this.cmbAraclar_SelectedIndexChanged);
             // 
             // chkDurum
             // 
@@ -124,7 +125,6 @@
             this.lblAraclar.TabIndex = 8;
             this.lblAraclar.Text = "Araç:";
             this.lblAraclar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblAraclar.Click += new System.EventHandler(this.lblAraclar_Click);
             // 
             // lblMarka
             // 
@@ -147,15 +147,14 @@
             this.lblModel.TabIndex = 10;
             this.lblModel.Text = "Model:";
             this.lblModel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblModel.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblYil
             // 
             this.lblYil.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblYil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYil.Location = new System.Drawing.Point(189, 207);
+            this.lblYil.Location = new System.Drawing.Point(209, 208);
             this.lblYil.Name = "lblYil";
-            this.lblYil.Size = new System.Drawing.Size(79, 30);
+            this.lblYil.Size = new System.Drawing.Size(62, 30);
             this.lblYil.TabIndex = 11;
             this.lblYil.Text = "Yıl:";
             this.lblYil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,6 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblDurum);
             this.Controls.Add(this.lblPlaka);

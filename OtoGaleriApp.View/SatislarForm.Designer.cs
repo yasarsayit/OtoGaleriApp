@@ -42,7 +42,7 @@
             this.dgvSatislar.RowTemplate.Height = 24;
             this.dgvSatislar.Size = new System.Drawing.Size(956, 546);
             this.dgvSatislar.TabIndex = 0;
-            this.dgvSatislar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSatislar_CellContentClick);
+            //this.dgvSatislar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSatislar_CellContentClick);
             // 
             // SatislarForm
             // 

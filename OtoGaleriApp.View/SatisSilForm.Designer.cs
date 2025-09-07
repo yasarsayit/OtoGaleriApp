@@ -42,7 +42,7 @@
             this.cmbSatislar.Name = "cmbSatislar";
             this.cmbSatislar.Size = new System.Drawing.Size(431, 28);
             this.cmbSatislar.TabIndex = 0;
-            this.cmbSatislar.SelectedIndexChanged += new System.EventHandler(this.cmbSatislar_SelectedIndexChanged);
+            //this.cmbSatislar.SelectedIndexChanged += new System.EventHandler(this.cmbSatislar_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -58,19 +58,21 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.SystemColors.Info;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.Location = new System.Drawing.Point(385, 215);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(147, 39);
             this.button1.TabIndex = 2;
             this.button1.Text = "Satış Sil";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // SatisSilForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);

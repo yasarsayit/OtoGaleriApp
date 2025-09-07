@@ -1,70 +1,44 @@
-﻿using System;
+﻿using OtoGaleriApp.Interfaces;
+using OtoGaleriApp.Presenter;
+using System;
 using System.Windows.Forms;
-using OtoGaleriApp.Model;
-using OtoGaleriApp.DataAccess;
 
 namespace OtoGaleriApp.View
 {
-    public partial class AracEkleForm : Form
+    public partial class AracEkleForm : Form, IAracEkleView
     {
+        private readonly AracEklePresenter _presenter;
+
         public AracEkleForm()
         {
             InitializeComponent();
+            _presenter = new AracEklePresenter(this);
+        }
+
+        public string Marka => txtMarka.Text;
+        public string Model => txtModel.Text;
+        public string Plaka => txtPlaka.Text;
+        public string Yil => txtYil.Text;
+        public bool Durum => chkSatildi.Checked;
+
+        public void ShowMessage(string message)
+        {
+            MessageBox.Show(message);
+        }
+
+        public void CloseForm()
+        {
+            this.Close();
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            
-        }
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            // Bu alan boş kalabilir ya da etkileşim varsa eklenir.
+            _presenter.AracEkle();
         }
 
         private void AracEkleForm_Load(object sender, EventArgs e)
         {
-            // Form ilk açıldığında yapılacak işlemler varsa buraya eklenir.
-        }
 
-        private void btnEkle_Click_1(object sender, EventArgs e)
-        {
-            using (var context = new GaleriContext())
-            {
-                try
-                {
-                    Arac yeniArac = new Arac
-                    {
-                        Marka = txtMarka.Text,
-                        Model = txtModel.Text,
-                        Plaka = txtPlaka.Text,
-                        Yil = int.Parse(txtYil.Text),
-                        Durum = chkSatildi.Checked
-                    };
-
-                    context.Araclar.Add(yeniArac);
-                    context.SaveChanges();
-
-                    MessageBox.Show("Araç başarıyla eklendi!");
-                    
-                    this.Close(); // Formu kapat
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Hata: " + ex.Message);
-                }
-                if (string.IsNullOrWhiteSpace(txtMarka.Text) || string.IsNullOrWhiteSpace(txtModel.Text) || string.IsNullOrWhiteSpace(txtPlaka.Text) || string.IsNullOrWhiteSpace(txtYil.Text))
-                {
-                    MessageBox.Show("Lütfen tüm alanları doldurun.");
-                    return;
-                }
-
-            }
         }
     }
-
-
 }
-
-

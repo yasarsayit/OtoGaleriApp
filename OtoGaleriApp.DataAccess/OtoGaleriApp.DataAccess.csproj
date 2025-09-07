@@ -56,6 +56,10 @@
     <Compile Include="Migrations\202508060656252_InitialCreate.Designer.cs">
       <DependentUpon>202508060656252_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202508301154161_ChangeTcToString.cs" />
+    <Compile Include="Migrations\202508301154161_ChangeTcToString.Designer.cs">
+      <DependentUpon>202508301154161_ChangeTcToString.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -72,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202508060656252_InitialCreate.resx">
       <DependentUpon>202508060656252_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202508301154161_ChangeTcToString.resx">
+      <DependentUpon>202508301154161_ChangeTcToString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

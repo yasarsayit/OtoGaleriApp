@@ -43,7 +43,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arac.cs" />
+    <Compile Include="IAracEkleView.cs" />
+    <Compile Include="IAracGuncelleView.cs" />
+    <Compile Include="IAracListeleView.cs" />
+    <Compile Include="IAracSilView.cs" />
     <Compile Include="IGirisView.cs" />
+    <Compile Include="IKisiEkleView.cs" />
+    <Compile Include="IKisiGuncelleView.cs" />
+    <Compile Include="IKisiListeView.cs" />
+    <Compile Include="IKisiSilView.cs" />
+    <Compile Include="IKullaniciEkleView.cs" />
+    <Compile Include="ISatisGuncelleView.cs" />
+    <Compile Include="ISatisListeView.cs" />
+    <Compile Include="ISatisSilView.cs" />
+    <Compile Include="ISatisYapView.cs" />
     <Compile Include="Satis.cs" />
     <Compile Include="Kisi.cs" />
     <Compile Include="Kullanici.cs" />

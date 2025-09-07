@@ -41,7 +41,7 @@ namespace OtoGaleriApp.View
 
         private void btnAracSil_Click(object sender, EventArgs e)
         {
-            AracSilForm form = new AracSilForm(this);
+            AracSilForm form = new AracSilForm();
             form.ShowDialog();
         }
 
